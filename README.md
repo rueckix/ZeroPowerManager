@@ -1,3 +1,7 @@
+### Modifications over base
+Removing all dependencies from Arduino.h which is causing compilation issues on newer Arduino Core APIs.
+
+
 ### ZeroPowerManager
 Library to support very low power Arduino Zero operation.
 
