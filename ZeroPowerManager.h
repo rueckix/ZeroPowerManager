@@ -37,9 +37,6 @@ extern "C"
 typedef void(*voidFuncPtr)(void);
 
 
-/* Port control */
-void  zpmPortDisableDigital(void);
-void  zpmPortDisableSPI(void);
 void  zpmPortDisableUSB(void);
 
 
