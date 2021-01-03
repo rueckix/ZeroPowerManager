@@ -47,43 +47,7 @@
 
 #include  <stdint.h>
 #include  <gclk.h>
-#include  <Arduino.h>
 #include  "ZeroPowerManager.h"
-
-
-/******************************************************************************/
-/**************************** PORT CONFIGURATION ******************************
- *
- * Disable unneeded ports so they won't oscillate and consume power.
- *
- ******************************************************************************/
-
-/*******************************************************************************
-
-    void  zpmPortDisableDigital(void)
-
-    Set all Arduino digital ports to their power-up disabled state.
-
-******************************************************************************/
-void  zpmPortDisableDigital(void) {
-    for (uint32_t ul=0; ul<NUM_DIGITAL_PINS; ul++) {
-        PORT->Group[g_APinDescription[ul].ulPort].PINCFG[g_APinDescription[ul].ulPin].reg=0 ;
-    }
-}
-
-
-/*******************************************************************************
-
-    void  zpmPortDisableSPI(void)
-
-    Set the default Arduino SPI pins to their power-up disabled state.
-
-******************************************************************************/
-void  zpmPortDisableSPI(void) {
-    for (uint32_t ul=PIN_SPI_MISO; ul<=PIN_SPI_SCK; ul++) {
-        PORT->Group[g_APinDescription[ul].ulPort].PINCFG[g_APinDescription[ul].ulPin].reg=0 ;
-    }
-}
 
 
 /*******************************************************************************
